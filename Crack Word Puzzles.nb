@@ -1,0 +1,222 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8530,        214]
+NotebookOptionsPosition[      7225,        182]
+NotebookOutlinePosition[      7570,        197]
+CellTagsIndexPosition[      7527,        194]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"DictionaryLookup", "[", "All", "]"}]], "Input",
+ CellChangeTimes->{{3.7985450145104866`*^9, 3.798545014898161*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"382f1aaf-8b61-44fc-b70a-84993b083583"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Arabic\"\>", ",", "\<\"BrazilianPortuguese\"\>", 
+   ",", "\<\"Breton\"\>", ",", "\<\"BritishEnglish\"\>", 
+   ",", "\<\"Catalan\"\>", ",", "\<\"Croatian\"\>", ",", "\<\"Danish\"\>", 
+   ",", "\<\"Dutch\"\>", ",", "\<\"English\"\>", ",", "\<\"Esperanto\"\>", 
+   ",", "\<\"Faroese\"\>", ",", "\<\"Finnish\"\>", ",", "\<\"French\"\>", 
+   ",", "\<\"Galician\"\>", ",", "\<\"German\"\>", ",", "\<\"Hebrew\"\>", 
+   ",", "\<\"Hindi\"\>", ",", "\<\"Hungarian\"\>", ",", "\<\"IrishGaelic\"\>",
+    ",", "\<\"Italian\"\>", ",", "\<\"Latin\"\>", ",", "\<\"Polish\"\>", 
+   ",", "\<\"Portuguese\"\>", ",", "\<\"Russian\"\>", 
+   ",", "\<\"ScottishGaelic\"\>", ",", "\<\"Spanish\"\>", 
+   ",", "\<\"Swedish\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.798545015070307*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"7eb6bf10-747e-48de-a41a-9eacf1efb11c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{
+   RowBox[{"DictionaryLookup", "[", 
+    RowBox[{"{", 
+     RowBox[{"\"\<English\>\"", ",", 
+      RowBox[{"\"\<a\>\"", "~~", "___", "~~", "\"\<c\>\""}]}], "}"}], "]"}], 
+   ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"StringLength", "[", "#", "]"}], "\[Equal]", "5"}], "&"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.7985450216478004`*^9, 3.798545029927238*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"9aefd5a0-e0b2-409b-9546-595bf6d37d61"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"antic\"\>", ",", "\<\"aspic\"\>", ",", "\<\"attic\"\>", 
+   ",", "\<\"auric\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.7985450222808514`*^9, 3.7985450301322336`*^9}},
+ CellLabel->"Out[8]=",ExpressionUUID->"db6a33d7-a849-4b11-ad1d-9ccf949f1cec"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", "\[IndentingNewLine]", 
+   RowBox[{"\"\<Allow reuse\>\"", ";"}], "\[IndentingNewLine]", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"StringJoin", "/@", 
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"Tuples", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<e\>\"", ",", "\"\<a\>\"", ",", "\"\<r\>\"", ",", "\"\<t\>\"", 
+         ",", "\"\<h\>\""}], "}"}], ",", "4"}], "]"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Length", "[", 
+        RowBox[{"DictionaryLookup", "[", 
+         RowBox[{"StringJoin", "[", "#", "]"}], "]"}], "]"}], "\[NotEqual]", 
+       "0"}], "&"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.798545060908769*^9, 
+  3.798545095155452*^9}},ExpressionUUID->"8907843f-0409-4a3e-9a90-\
+ca77dfb47cb2"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"area\"\>", ",", "\<\"rear\"\>", ",", "\<\"rare\"\>", 
+   ",", "\<\"rate\"\>", ",", "\<\"rhea\"\>", ",", "\<\"tear\"\>", 
+   ",", "\<\"teat\"\>", ",", "\<\"tare\"\>", ",", "\<\"tart\"\>", 
+   ",", "\<\"tree\"\>", ",", "\<\"thee\"\>", ",", "\<\"that\"\>", 
+   ",", "\<\"hear\"\>", ",", "\<\"heat\"\>", ",", "\<\"here\"\>", 
+   ",", "\<\"hare\"\>", ",", "\<\"hart\"\>", ",", "\<\"hate\"\>", 
+   ",", "\<\"hath\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.7985450681451473`*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"a6b0a7cc-3483-4f0a-bb3a-05e5f51ac3a3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringJoin", "/@", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"Tuples", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<e\>\"", ",", "\"\<a\>\"", ",", "\"\<r\>\"", ",", "\"\<t\>\"", 
+        ",", "\"\<h\>\""}], "}"}], ",", "4"}], "]"}], ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"DeleteDuplicates", "[", "#", "]"}], "\[Equal]", "#"}], "&&", 
+      RowBox[{
+       RowBox[{"Length", "[", 
+        RowBox[{"DictionaryLookup", "[", 
+         RowBox[{"StringJoin", "[", "#", "]"}], "]"}], "]"}], "\[NotEqual]", 
+       "0"}]}], "&"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.798545036766488*^9, 3.798545037212013*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"1c18ed1e-80ba-4d3d-a8f0-c52fda1b67c2"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"rate\"\>", ",", "\<\"rhea\"\>", ",", "\<\"tear\"\>", 
+   ",", "\<\"tare\"\>", ",", "\<\"hear\"\>", ",", "\<\"heat\"\>", 
+   ",", "\<\"hare\"\>", ",", "\<\"hart\"\>", ",", "\<\"hate\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.7985450375531473`*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"23778af5-9ae1-40ff-a623-1124e8c00320"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DictionaryLookup", "[", 
+  RowBox[{"x__", "/;", 
+   RowBox[{"x", "===", 
+    RowBox[{"StringReverse", "[", "x", "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7985451018315086`*^9, 3.798545102199074*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"dc397fd1-8698-47c7-9017-537d1125fc6a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"a\"\>", ",", "\<\"aha\"\>", ",", "\<\"aka\"\>", 
+   ",", "\<\"bib\"\>", ",", "\<\"bob\"\>", ",", "\<\"boob\"\>", 
+   ",", "\<\"bub\"\>", ",", "\<\"CFC\"\>", ",", "\<\"civic\"\>", 
+   ",", "\<\"dad\"\>", ",", "\<\"deed\"\>", ",", "\<\"deified\"\>", 
+   ",", "\<\"did\"\>", ",", "\<\"dud\"\>", ",", "\<\"DVD\"\>", 
+   ",", "\<\"eke\"\>", ",", "\<\"ere\"\>", ",", "\<\"eve\"\>", 
+   ",", "\<\"ewe\"\>", ",", "\<\"eye\"\>", ",", "\<\"gag\"\>", 
+   ",", "\<\"gig\"\>", ",", "\<\"huh\"\>", ",", "\<\"I\"\>", 
+   ",", "\<\"kayak\"\>", ",", "\<\"kook\"\>", ",", "\<\"level\"\>", 
+   ",", "\<\"ma'am\"\>", ",", "\<\"madam\"\>", ",", "\<\"mam\"\>", 
+   ",", "\<\"MGM\"\>", ",", "\<\"minim\"\>", ",", "\<\"mom\"\>", 
+   ",", "\<\"mum\"\>", ",", "\<\"nan\"\>", ",", "\<\"non\"\>", 
+   ",", "\<\"noon\"\>", ",", "\<\"nun\"\>", ",", "\<\"oho\"\>", 
+   ",", "\<\"pap\"\>", ",", "\<\"peep\"\>", ",", "\<\"pep\"\>", 
+   ",", "\<\"pip\"\>", ",", "\<\"poop\"\>", ",", "\<\"pop\"\>", 
+   ",", "\<\"pup\"\>", ",", "\<\"radar\"\>", ",", "\<\"redder\"\>", 
+   ",", "\<\"refer\"\>", ",", "\<\"repaper\"\>", ",", "\<\"reviver\"\>", 
+   ",", "\<\"rotor\"\>", ",", "\<\"sagas\"\>", ",", "\<\"sees\"\>", 
+   ",", "\<\"seres\"\>", ",", "\<\"sexes\"\>", ",", "\<\"shahs\"\>", 
+   ",", "\<\"sis\"\>", ",", "\<\"solos\"\>", ",", "\<\"SOS\"\>", 
+   ",", "\<\"stats\"\>", ",", "\<\"stets\"\>", ",", "\<\"tat\"\>", 
+   ",", "\<\"tenet\"\>", ",", "\<\"TNT\"\>", ",", "\<\"toot\"\>", 
+   ",", "\<\"tot\"\>", ",", "\<\"tut\"\>", ",", "\<\"wow\"\>", 
+   ",", "\<\"WWW\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.7985451029398146`*^9},
+ CellLabel->"Out[11]=",ExpressionUUID->"5605703f-a077-449b-8574-12ef903734d9"]
+}, Open  ]]
+},
+WindowSize->{775, 657},
+WindowMargins->{{Automatic, -2030}, {30, Automatic}},
+FrontEndVersion->"12.0 for Microsoft Windows (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 217, 3, 28, "Input",ExpressionUUID->"382f1aaf-8b61-44fc-b70a-84993b083583"],
+Cell[800, 27, 887, 14, 71, "Output",ExpressionUUID->"7eb6bf10-747e-48de-a41a-9eacf1efb11c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1724, 46, 494, 13, 28, "Input",ExpressionUUID->"9aefd5a0-e0b2-409b-9546-595bf6d37d61"],
+Cell[2221, 61, 293, 5, 32, "Output",ExpressionUUID->"db6a33d7-a849-4b11-ad1d-9ccf949f1cec"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2551, 71, 802, 22, 105, "Input",ExpressionUUID->"8907843f-0409-4a3e-9a90-ca77dfb47cb2"],
+Cell[3356, 95, 599, 10, 52, "Output",ExpressionUUID->"a6b0a7cc-3483-4f0a-bb3a-05e5f51ac3a3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3992, 110, 768, 20, 48, "Input",ExpressionUUID->"1c18ed1e-80ba-4d3d-a8f0-c52fda1b67c2"],
+Cell[4763, 132, 375, 7, 32, "Output",ExpressionUUID->"23778af5-9ae1-40ff-a623-1124e8c00320"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5175, 144, 310, 6, 28, "Input",ExpressionUUID->"dc397fd1-8698-47c7-9017-537d1125fc6a"],
+Cell[5488, 152, 1721, 27, 109, "Output",ExpressionUUID->"5605703f-a077-449b-8574-12ef903734d9"]
+}, Open  ]]
+}
+]
+*)
+
