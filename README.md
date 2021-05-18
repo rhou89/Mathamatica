@@ -6,4 +6,4 @@ Not all of the contents or codes are original. Some of them are collected on the
 
 ## Content
 
-Update May 18, 2021: [A simple demontration on applying Monte Carlo mehtods to approximate the value of Pi](/Math/Monte Carlo mehtod estimates Pi.nb)
+Update May 18, 2021: [A simple demontration on applying Monte Carlo mehtods to approximate the value of Pi](Math/Monte%20Carlo%20mehtod%20estimates%20Pi.nb)
